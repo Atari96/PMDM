@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensaje" />
+
+    <EditText
+        android:id="@+id/editTextMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Tarea" />
+
+    <TextView
+        android:id="@+id/textViewHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hora" />
+
+    <EditText
+        android:id="@+id/editTextHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewMinutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minutos" />
+
+    <EditText
+        android:id="@+id/editTextMinutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttonAlarma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>
