@@ -10,16 +10,23 @@ import androidx.fragment.app.DialogFragment
 class Fragmento_cambiar {
     class CambioImporteDialogFragment : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-            var view=layoutInflater.inflate(R.layout.fragment_layout, null)
-            var dialog:Dialog=AlertDialog.Builder(requireContext())
+            val view = layoutInflater.inflate(R.layout.fragment_layout, null)
+            val importeEditText: EditText = view.findViewById(R.id.editTextFragment)
+
+            parentFragmentManager.setFragmentResultListener("requestKey2", this) { key, bundle ->
+                val importe2: String? = bundle.getString("importeKey2")
+                importeEditText.setText(importe2)
+            }
+
+            val dialog: Dialog = AlertDialog.Builder(requireContext())
                 .setView(view)
                 .setMessage(getString(R.string.order_confirmation))
                 .setPositiveButton(getString(R.string.ok)) { _, _ ->
-                    var importeEditText: EditText =view.findViewById(R.id.editTextFragment)
-                    var importe=importeEditText.text.toString()
+                    val importeEditText: EditText = view.findViewById(R.id.editTextFragment)
+                    val importe = importeEditText.text.toString()
                     parentFragmentManager.setFragmentResult("requestKey", bundleOf("importeKey" to importe))
                 }
-                .setNegativeButton(getString(R.string.CANCELAR)) { _, _ -> dismiss()}
+                .setNegativeButton(getString(R.string.CANCELAR)) { _, _ -> dismiss() }
                 .create()
             return dialog
         }
