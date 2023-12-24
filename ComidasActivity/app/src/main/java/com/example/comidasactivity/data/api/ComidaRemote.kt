@@ -16,6 +16,4 @@ data class ComidaRemote(
         descripcion=this.descripcion,
         foto=this.foto
     )
-
-
 }

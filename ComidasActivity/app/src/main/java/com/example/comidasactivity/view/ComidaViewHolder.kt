@@ -1,5 +1,6 @@
 package com.example.comidasactivity.view
 
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -18,5 +19,6 @@ class ComidaViewHolder(viewItem: View):RecyclerView.ViewHolder(viewItem) {
         id.text=comida.id.toString()
         desc.text=comida.descripcion.toString()
         Glide.with(view.context).load(comida.foto).into(foto)
+        Log.i("click comViewHolder","metodo render(comida)")
     }
 }

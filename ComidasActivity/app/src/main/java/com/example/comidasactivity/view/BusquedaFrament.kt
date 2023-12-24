@@ -1,6 +1,7 @@
 package com.example.comidasactivity.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -16,14 +17,15 @@ class BusquedaFrament: Fragment(R.layout.fragment_busqueda) {
 
     private val comidasViewModel:ComidaViewModel by navGraphViewModels(R.id.nav_graph)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         var tipoComidaEditText: EditText =view.findViewById(R.id.editTextTipoComida)
         var buscarButton: Button =view.findViewById(R.id.buttonBuscar)
         buscarButton.setOnClickListener {
             comidasViewModel.get(tipoComidaEditText.text.toString())
             view.findNavController().navigate(R.id.comidasRemotasFragment)
         }
+        Log.i("click busF1 ","busquedaF onViewCreated")
     }
 }

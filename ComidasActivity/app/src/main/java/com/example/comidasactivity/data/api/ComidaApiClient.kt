@@ -7,4 +7,7 @@ import retrofit2.http.Query
 interface ComidaApiClient {
     @GET("filter.php")
    suspend fun getComida(@Query("c") tipo:String):Response<CategoriaRemote>
+
+   @GET("lookup.php")
+   suspend fun getReceta(@Query("i") id:Int):Response<NodoRaizDetalleComida>
 }
