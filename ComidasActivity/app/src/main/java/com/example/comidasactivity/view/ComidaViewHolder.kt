@@ -9,11 +9,17 @@ import com.bumptech.glide.Glide
 import com.example.comidasactivity.R
 import com.example.comidasactivity.modelo.Comida
 
-class ComidaViewHolder(viewItem: View):RecyclerView.ViewHolder(viewItem) {
+class ComidaViewHolder(viewItem: View, llamarDetalle: (position: Int) -> Unit):RecyclerView.ViewHolder(viewItem) {
     var id: TextView =viewItem.findViewById(R.id.textViewId)
     var desc: TextView =viewItem.findViewById(R.id.textViewDesc)
     var foto: ImageView =viewItem.findViewById(R.id.imageViewFoto)
     var view=viewItem
+
+    init {
+        viewItem.setOnClickListener {
+            llamarDetalle(adapterPosition)
+        }
+    }
 
     fun render(comida:Comida) {
         id.text=comida.id.toString()

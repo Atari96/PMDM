@@ -13,9 +13,8 @@ class ComidaService {
 
     suspend fun getDetalle(id:Int): NodoRaizDetalleComida? {
         Log.i("click cs2 ","metodo getdetalle(id) FUNCIONA "+id.toString())
-        /*val response = retrofit.create(ComidaApiClient::class.java).getReceta(id)*/
         val response = retrofit.create(ComidaApiClient::class.java).getReceta(id)
-        Log.i("Solicitud", "Realizando la solicitud...")
+        Log.i("click cs2 Solicitud", "Realizando la solicitud...")
         if (response.isSuccessful) {
             val receta = response.body()
             if (receta != null) {

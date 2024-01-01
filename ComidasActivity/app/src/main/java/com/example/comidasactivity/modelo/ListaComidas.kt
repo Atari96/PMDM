@@ -1,7 +1,6 @@
 package com.example.comidasactivity.modelo
 
 import android.util.Log
-import com.example.comidasactivity.data.api.CategoriaRemote
 import com.example.comidasactivity.data.api.ComidaService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -9,9 +8,9 @@ import kotlinx.coroutines.withContext
 class ListaComidas {
 
     private val api=ComidaService()
-    private val comidas:List<Comida> = listOf()
+    //private val comidas:List<Comida> = listOf()
 
-    fun getComidas():List<Comida> =comidas
+    //fun getComidas():List<Comida> =comidas
 
     suspend fun getComidas(tipo:String):List<Comida> {
         Log.i("click lc1","2 entra en corru getcomidas()") //FUNCIONA

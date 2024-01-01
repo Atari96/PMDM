@@ -8,20 +8,12 @@
         android:id="@+id/busquedaFrament"
         android:name="com.example.comidasactivity.view.BusquedaFrament"
         android:label="BusquedaFrament" >
-        <action
-            android:id="@+id/action_busquedaFrament_to_comidasRemotasFragment"
-            app:destination="@id/comidasRemotasFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/comidasRemotasFragment"
         android:name="com.example.comidasactivity.view.ComidasRemotasFragment"
         android:label="ComidasRemotasFragment" >
-        <action
-            android:id="@+id/action_comidasRemotasFragment_to_detalleFragment"
-            app:destination="@id/detalleFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/detalleFragment"
         android:name="com.example.comidasactivity.view.DetalleFragment"
